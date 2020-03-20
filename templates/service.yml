@@ -1,0 +1,14 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: websvc
+spec:
+  type: NodePort
+  ports:
+   - port: 80
+     targetPort: 80
+     nodePort: 32750
+  selector:
+    name: webdeployments
+  
+
