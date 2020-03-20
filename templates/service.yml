@@ -7,8 +7,24 @@ spec:
   ports:
    - port: 80
      targetPort: 80
-     nodePort: 32750
+     protocol: TCP
+     name: http
+     #Protocol: TCP
+    # targetPort: 80
+    # nodePort: 32750
   selector:
-    name: webdeployments
+    name: webserver
   
 
+#apiVersion: v1
+#kind: Service
+#metadata:
+ # name: my-nginx
+ # labels:
+ #   run: my-nginx
+#spec:
+ # ports:
+ # - port: 80
+  #  protocol: TCP
+ # selector:
+#    run: my-nginx

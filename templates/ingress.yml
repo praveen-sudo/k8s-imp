@@ -1,0 +1,12 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: webserver
+spec:
+  rules:
+    - host: kub-mst.coral.io
+      http:
+        paths:
+          - backend:
+              serviceName: websvc
+              servicePort: 80
